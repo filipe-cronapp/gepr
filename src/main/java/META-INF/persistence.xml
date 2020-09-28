@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/sqlc</non-jta-data-source>
+        <class>app.entity.Licitacao</class>
+        <class>app.entity.Gerencia</class>
+        <class>app.entity.AnexosPergunta</class>
+        <class>app.entity.User</class>
+        <class>app.entity.Resposta</class>
+        <class>app.entity.Role</class>
+        <class>app.entity.AnexosResposta</class>
+        <class>app.entity.PalavrasChave</class>
+        <class>app.entity.PerguntaRespondentes</class>
+        <class>app.entity.Pergunta</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

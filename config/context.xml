@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><Context>
+    <Resource accessToUnderlyingConnectionAllowed="false" driverClassName="org.h2.Driver" logAbandoned="true" name="jdbc/gepr" password="root" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:h2:file:~/gepr;AUTO_SERVER=TRUE;DATABASE_TO_UPPER=FALSE;ALIAS_COLUMN_NAME=TRUE" username="root"/>
+    <Resource accessToUnderlyingConnectionAllowed="false" driverClassName="oracle.jdbc.OracleDriver" logAbandoned="true" name="jdbc/sqlc" password="74125800" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="SQLC" type="javax.sql.DataSource" url="jdbc:oracle:thin:@db-sqlc.cfdacj6pdovg.us-east-1.rds.amazonaws.com:1521:ORCL" username="root"/>
+    <Profile value="DEV"/>
+    <Profile value="PROD"/>
+    <Profile value="HOMOLOGAÇÃO"/>
+    <Profile value="Teste"/>
+</Context>

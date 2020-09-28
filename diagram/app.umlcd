@@ -1,0 +1,2589 @@
+{
+  "cells": [
+    {
+      "angle": 0,
+      "apiPath": "src/main/app/api.raml",
+      "attrs": {},
+      "chkApi": false,
+      "dataSource": "jdbc/sqlc",
+      "disableCache": true,
+      "exceptionPackage": "app.exceptions",
+      "generationType": "drop-and-create-tables",
+      "id": "paperCell",
+      "namespace": "app",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "queries": [],
+      "restSecurity": {
+        "delete": "authenticated",
+        "get": "authenticated",
+        "post": "authenticated",
+        "put": "authenticated"
+      },
+      "runtimeClass": "cronos.widgets.joint.uml.Paper",
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "type": "basic.Rect",
+      "visionLikePackage": false,
+      "z": 1
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "caminho:java.lang.String",
+        "pergunta:Pergunta"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 90,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\ncaminho\npergunta\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 85.046875,
+          "text": "Texto\nTexto\nPergunta\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,140)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "AnexosPergunta"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "anpe_cd_anexo",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "caminho",
+          "type": "java.lang.String",
+          "dbName": "anpe_tx_caminho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Caminho",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "pergunta",
+          "type": "Pergunta",
+          "dbName": "perg_cd_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        }
+      ],
+      "generateView": "Auto",
+      "id": "f7351561-240e-4b90-849b-705b3509913f",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "AnexosPergunta",
+      "position": {
+        "x": 486,
+        "y": 772
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 118.69715118408203,
+        "width": 147.703125
+      },
+      "tableName": "ANEXO_PERGUNTA",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 51
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "caminho:java.lang.String",
+        "resposta:Resposta"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 90,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\ncaminho\nresposta\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 85.21875,
+          "text": "Texto\nTexto\nResposta\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,140)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "AnexosResposta"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "anre_cd_anexo",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "caminho",
+          "type": "java.lang.String",
+          "dbName": "anre_tx_caminho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Caminho",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "resposta",
+          "type": "Resposta",
+          "dbName": "resp_cd_resposta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        }
+      ],
+      "generateView": "Auto",
+      "id": "6c2f5813-ad96-46c3-ad3a-e9c4037eefe0",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "AnexosResposta",
+      "position": {
+        "x": 34,
+        "y": 762
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 118.69715118408203,
+        "width": 149.703125
+      },
+      "tableName": "ANEXO_RESPOSTA",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 53
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "nome:java.lang.String"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 70,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\nnome\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 61.53125,
+          "text": "Texto\nTexto\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,120)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "Gerencia"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "orga_cd_orgao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "nome",
+          "type": "java.lang.String",
+          "dbName": "orga_nm_orgao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Nome",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "generateView": "Auto",
+      "id": "4ec25179-35ec-4cdc-b337-cfb37ce607ff",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "Gerencia",
+      "position": {
+        "x": 242,
+        "y": 120
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 107.89323043823242,
+        "width": 105.828125
+      },
+      "tableName": "ORGAO",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 27
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "numero_processo:java.lang.String",
+        "nome:java.lang.String",
+        "descricao:java.lang.String",
+        "data_abertura:java.util.Date",
+        "previsao_encerramento:java.util.Date",
+        "data_encerramento:java.util.Date",
+        "criador_licitacao:User",
+        "gerencia:Gerencia",
+        "responsavelTecnico:java.lang.String",
+        "statusLicitacao:java.lang.String"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 250,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\nnumero_processo\nnome\ndescricao\ndata_abertura\nprevisao_encerramento\ndata_encerramento\ncriador_licitacao\ngerencia\nresponsavelTecnico\nstatusLicitacao\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 149.578125,
+          "text": "Texto\nTexto\nTexto\nTexto\nData\nData\nData\nUser\nGerencia\nTexto\nTexto\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,300)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "Licitacao"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "lici_cd_licitacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "numero_processo",
+          "type": "java.lang.String",
+          "dbName": "lici_nr_processo",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Número do Processo",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": true,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "nome",
+          "type": "java.lang.String",
+          "dbName": "lici_nm_licitacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Lici _nome",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "descricao",
+          "type": "java.lang.String",
+          "dbName": "lici_ds_licitacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Descrição",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "data_abertura",
+          "type": "java.util.Date",
+          "dbName": "lici_dt_abertura",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Data  de Abertura",
+          "mask": "DD/MM/YYYY",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": false,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "previsao_encerramento",
+          "type": "java.util.Date",
+          "dbName": "lici_dt_previsao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Previsão de Encerramento",
+          "mask": "DD/MM/YYYY",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "data_encerramento",
+          "type": "java.util.Date",
+          "dbName": "lici_dt_encerramento",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Data de Encerramento",
+          "mask": "DD/MM/YYYY",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "criador_licitacao",
+          "type": "User",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Criador da Licitação",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "gerencia",
+          "type": "Gerencia",
+          "dbName": "orga_cd_orgao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Gerência",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "responsavelTecnico",
+          "type": "java.lang.String",
+          "dbName": "lici_tx_chave_resp",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Responsavel Técnico",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "statusLicitacao",
+          "type": "java.lang.String",
+          "dbName": "stli_in_status",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Status Licitacao",
+          "mask": "0;0",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "generateView": "Auto",
+      "id": "b9ba3d88-0908-4ea4-9815-bacda81a8731",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "Licitacao",
+      "position": {
+        "x": 448,
+        "y": 254
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 205.984130859375,
+        "width": 212.21875
+      },
+      "tableName": null,
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 12
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "nome:java.lang.String",
+        "pergunta:Pergunta"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 90,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\nnome\npergunta\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 77.4375,
+          "text": "Texto\nTexto\nPergunta\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,140)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "PalavrasChave"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "pach_cd_palavra",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "nome",
+          "type": "java.lang.String",
+          "dbName": "pach_tx_palavra",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Nome",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "pergunta",
+          "type": "Pergunta",
+          "dbName": "perg_cd_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        }
+      ],
+      "generateView": "Auto",
+      "id": "5af82b68-5635-4f36-aa7c-956663c91edb",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "PalavrasChave",
+      "position": {
+        "x": 772,
+        "y": 538
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 118.69715118408203,
+        "width": 140.09375
+      },
+      "tableName": "PALAVRA_CHAVE",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 16
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "data_cadastro:java.util.Date",
+        "descricao:java.lang.String",
+        "data_publicacao:java.util.Date",
+        "fk_licitacao:Licitacao",
+        "criador_pergunta:User",
+        "pergunta_associada:Pergunta",
+        "subQuestionamento:java.lang.String",
+        "respostaFinal:java.lang.String",
+        "statusPergunta:java.lang.String"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 230,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\ndata_cadastro\ndescricao\ndata_publicacao\nfk_licitacao\ncriador_pergunta\npergunta_associada\nsubQuestionamento\nrespostaFinal\nstatusPergunta\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 134.078125,
+          "text": "Texto\nData\nTexto\nData\nLicitacao\nUser\nPergunta\nTexto\nTexto\nTexto\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,280)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "Pergunta"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "perg_cd_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "data_cadastro",
+          "type": "java.util.Date",
+          "dbName": "perg_dt_criacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Data de Cadastro",
+          "mask": "DD/MM/YYYY",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": false,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "descricao",
+          "type": "java.lang.String",
+          "dbName": "perg_ds_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Descrição",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "data_publicacao",
+          "type": "java.util.Date",
+          "dbName": "perg_dt_publicacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Data de Publicação",
+          "mask": "DD/MM/YYYY",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": false,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "fk_licitacao",
+          "type": "Licitacao",
+          "dbName": "lici_cd_licitacao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "fk _licitacao",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "criador_pergunta",
+          "type": "User",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Criador da Pergunta",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "pergunta_associada",
+          "type": "Pergunta",
+          "dbName": "perg_cd_pai",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Pergunta Associada",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "subQuestionamento",
+          "type": "java.lang.String",
+          "dbName": "perg_tx_questionamento",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Sub Questionamento",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "respostaFinal",
+          "type": "java.lang.String",
+          "dbName": "perg_tx_resp_final",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Resposta Final",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "statusPergunta",
+          "type": "java.lang.String",
+          "dbName": "stpe_in_status",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Status Pergunta",
+          "mask": "0;0",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": true,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "generateView": "Auto",
+      "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "Pergunta",
+      "position": {
+        "x": 456,
+        "y": 500
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 195.0330047607422,
+        "width": 196.734375
+      },
+      "tableName": null,
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 14
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "pergunta:Pergunta",
+        "user:User"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "fill": "#fffec0",
+          "height": 90,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "fill": "#000",
+          "font-size": 11,
+          "text": "id\npergunta\nuser\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 123.375,
+          "text": "Texto\nPergunta\nUser\n"
+        },
+        ".uml-class-methods-rect": {
+          "fill": "#fffec0",
+          "height": 30,
+          "transform": "translate(0,140)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "fill": "#fffec0",
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "PerguntaRespondentes"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "repe_cd_respondente",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "pergunta",
+          "type": "Pergunta",
+          "dbName": "perg_cd_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "generateView": "Auto",
+      "id": "a008da1a-44df-4fc2-8bc7-d176178b7786",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "PerguntaRespondentes",
+      "position": {
+        "x": 208,
+        "y": 622
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "AssociationClass",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 118.69715118408203,
+        "width": 186.03125
+      },
+      "tableName": "RESPONDENTE_PERGUNTA",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 20
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "descricao:java.lang.String",
+        "respondente:User",
+        "pergunta:Pergunta",
+        "data_resposta:java.util.Date"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "height": 130,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\ndescricao\nrespondente\npergunta\ndata_resposta\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 103.71875,
+          "text": "Texto\nTexto\nUser\nPergunta\nData\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,180)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "Resposta"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "resp_cd_resposta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "descricao",
+          "type": "java.lang.String",
+          "dbName": "resp_ds_resposta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Descrição",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": false,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "respondente",
+          "type": "User",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Respondente",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "pergunta",
+          "type": "Pergunta",
+          "dbName": "perg_cd_pergunta",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "data_resposta",
+          "type": "java.util.Date",
+          "dbName": "resp_dt_cadastro",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Data de Resposta",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "generateView": "Auto",
+      "id": "afe3f219-6754-4d88-864a-ce3cc82ecb37",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "Resposta",
+      "position": {
+        "x": 30,
+        "y": 522
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 140.4170379638672,
+        "width": 166.375
+      },
+      "tableName": null,
+      "tableScheme": null,
+      "type": "uml.Class",
+      "z": 35
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "user:User"
+      ],
+      "attrs": {
+        ".": {
+          "display": "normal"
+        },
+        ".uml-class-attrs-rect": {
+          "height": 70,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "id\nuser\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 56.75,
+          "text": "Texto\nUser\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,120)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "Role"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "func_cd_funcao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Usuário",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "None",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        }
+      ],
+      "id": "1df87f56-c5ba-47f5-8e68-82931f49b989",
+      "isRest": true,
+      "methods": [],
+      "name": "Role",
+      "position": {
+        "x": 40,
+        "y": 306
+      },
+      "queries": [],
+      "restPath": "",
+      "restSecurity": {
+        "delete": "Administrators",
+        "post": "Administrators",
+        "put": "Administrators"
+      },
+      "role": "Class",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 107.89323043823242,
+        "width": 101.046875
+      },
+      "tableName": "FUNCAO",
+      "type": "uml.Class",
+      "z": 4
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "login:java.lang.String",
+        "name:java.lang.String",
+        "id:java.lang.String",
+        "email:java.lang.String",
+        "password:java.lang.String",
+        "gerencia:Gerencia"
+      ],
+      "attrs": {
+        ".": {
+          "display": "normal"
+        },
+        ".uml-class-attrs-rect": {
+          "height": 150,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-attrs-text": {
+          "font-size": 11,
+          "text": "login\nname\nid\nemail\npassword\ngerencia\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-size": 11,
+          "ref-x": 81.078125,
+          "text": "Texto\nTexto\nTexto\nTexto\nTexto\nGerencia\n"
+        },
+        ".uml-class-methods-rect": {
+          "height": 30,
+          "transform": "translate(0,200)"
+        },
+        ".uml-class-methods-text": {
+          "fill": "#0066FF",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "fill": "#000",
+          "font-size": 12,
+          "font-weight": "bold",
+          "text": "User"
+        },
+        "rect": {
+          "stroke": "yellow",
+          "stroke-width": 2
+        }
+      },
+      "fields": [
+        {
+          "name": "login",
+          "type": "java.lang.String",
+          "dbName": "usua_cd_chave",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Chave",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": true,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "name",
+          "type": "java.lang.String",
+          "dbName": "usua_nm_usuario",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Nome",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "fotr_cd_forca_trabalho",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": true,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": true
+        },
+        {
+          "name": "email",
+          "type": "java.lang.String",
+          "dbName": "usua_tx_email",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "E-mail",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "password",
+          "type": "java.lang.String",
+          "dbName": "usua_tx_senha",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Senha",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": true,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        },
+        {
+          "name": "gerencia",
+          "type": "Gerencia",
+          "dbName": "orga_cd_orgao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Gerência",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false
+        }
+      ],
+      "id": "d2e50f97-0b9e-4037-94ba-af64568af247",
+      "isRest": true,
+      "methods": [],
+      "modelType": "Table",
+      "name": "User",
+      "position": {
+        "x": 222,
+        "y": 284
+      },
+      "queries": [],
+      "restPath": "",
+      "restSecurity": {
+        "delete": "Administrators",
+        "post": "Administrators",
+        "put": "Administrators"
+      },
+      "role": "Class",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 151.31351470947266,
+        "width": 143.71875
+      },
+      "tableName": "USUARIO",
+      "type": "uml.Class",
+      "z": 10
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "0e149c45-eff9-4ee5-a67d-48bc190200b5",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "user:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "target": {
+        "id": "a008da1a-44df-4fc2-8bc7-d176178b7786"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 22
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "0ea67d2a-44a9-4923-b939-630f1bd40b8d",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "pergunta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "target": {
+        "id": "f7351561-240e-4b90-849b-705b3509913f"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 52
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "20c87145-a102-49eb-bace-e33e0e46644f",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "resposta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "afe3f219-6754-4d88-864a-ce3cc82ecb37"
+      },
+      "target": {
+        "id": "6c2f5813-ad96-46c3-ad3a-e9c4037eefe0"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 54
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "2e4c5333-31d7-4ede-a7a8-a57eb4ed4e3c",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "gerencia:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "4ec25179-35ec-4cdc-b337-cfb37ce607ff"
+      },
+      "target": {
+        "id": "b9ba3d88-0908-4ea4-9815-bacda81a8731"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 29
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "460cdbb4-5f79-4f16-8507-169fdf264365",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "fk_licitacao:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "b9ba3d88-0908-4ea4-9815-bacda81a8731"
+      },
+      "target": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 15
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "84c8d5da-70bc-4b81-a5c1-64188ed7d32d",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "criador_pergunta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "target": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 26
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "a3afe185-d3df-4ba7-8ed6-0007cb74f8b5",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "pergunta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "target": {
+        "id": "5af82b68-5635-4f36-aa7c-956663c91edb"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 55
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "bb66daeb-913c-4e3a-b336-081912aa0d16",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "pergunta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "target": {
+        "id": "afe3f219-6754-4d88-864a-ce3cc82ecb37"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 40
+    },
+    {
+      "attrs": {
+        ".": {
+          "display": "normal"
+        },
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "c147a7db-5dfc-4dba-b7c2-78749c21414c",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            },
+            "rect": {
+              "fill": "transparent"
+            }
+          }
+        }
+      ],
+      "queries": [],
+      "relationFields": [
+        "user:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "target": {
+        "id": "1df87f56-c5ba-47f5-8e68-82931f49b989"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 11
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "ca6f1f44-2a20-4169-a994-12c75d7baf0a",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "gerencia:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "4ec25179-35ec-4cdc-b337-cfb37ce607ff"
+      },
+      "target": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 28
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "da906e92-d334-4472-bc48-bba52209d4a6",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "respondente:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "target": {
+        "id": "afe3f219-6754-4d88-864a-ce3cc82ecb37"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 36
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "e4e62873-2e32-436a-a181-de0cdf91cb27",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "pergunta:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "cf274832-a4c9-4dd2-bb01-52bd2857be92"
+      },
+      "target": {
+        "id": "a008da1a-44df-4fc2-8bc7-d176178b7786"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 21
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "e590e3d0-ffc2-4b6d-a2ad-26abb80fa890",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "criador_licitacao:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "d2e50f97-0b9e-4037-94ba-af64568af247"
+      },
+      "target": {
+        "id": "b9ba3d88-0908-4ea4-9815-bacda81a8731"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 13
+    }
+  ],
+  "selectedGroup": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
+  "groups": [
+    {
+      "name": "Security",
+      "id": "841bf2db-1dee-49fa-b19d-991b2ed50e4f",
+      "cells": [
+        "d2e50f97-0b9e-4037-94ba-af64568af247",
+        "1df87f56-c5ba-47f5-8e68-82931f49b989"
+      ]
+    },
+    {
+      "name": "",
+      "id": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
+      "cells": [
+        "a008da1a-44df-4fc2-8bc7-d176178b7786",
+        "f7351561-240e-4b90-849b-705b3509913f",
+        "cf274832-a4c9-4dd2-bb01-52bd2857be92",
+        "d2e50f97-0b9e-4037-94ba-af64568af247",
+        "1df87f56-c5ba-47f5-8e68-82931f49b989",
+        "b9ba3d88-0908-4ea4-9815-bacda81a8731",
+        "5af82b68-5635-4f36-aa7c-956663c91edb",
+        "6c2f5813-ad96-46c3-ad3a-e9c4037eefe0",
+        "afe3f219-6754-4d88-864a-ce3cc82ecb37",
+        "4ec25179-35ec-4cdc-b337-cfb37ce607ff"
+      ]
+    }
+  ]
+}

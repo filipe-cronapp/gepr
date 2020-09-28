@@ -1,0 +1,126 @@
+<style title="local">
+#crn-text-component-311863 { 
+  color: green;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        trigger : 'hover'
+    });
+});
+</script>
+<div id="starter" ng-init="cronapi.client('js.blockly.Forum.tratarDadosPergunta').run(params.param0)" ng-destroy="" data-component="crn-start" screen-params=""> 
+  <h1 class="text-title-user component-holder text-left h3" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-96409">Pergunta</h1><h1 class="component-holder h5 text-left" xattr-position="text-left" xattr-type="h5" data-component="crn-text-component" id="crn-text-component-1060888"><strong>Status:</strong> {{pergunta[6]}}</h1> 
+  <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-768542" ng-show="cronapi.server('blockly.Utilidades.verificarUsuarioCompradorAoPublicar').attr().run(params.param0)"> 
+    <button class="btn btn-resposta" ng-click="cronapi.client('js.blockly.Forum.publicarResposta').run(params.param0)" xattr-fullsize="" xattr-theme="btn-default" xattr-disabled="" style="display: block; float: right;" ng-disabled="pergunta[4] == null || pergunta[5] == '3'"> <span style="padding: 8px;"><img class="img-p-resposta" src="css/svg/file-import-solid.svg">PUBLICAR RESPOSTA</span> </button> 
+  </div> 
+  <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-69341"> 
+    <button class="btn btn-add" xattr-fullsize="" xattr-theme="btn-default" xattr-disabled="" style="display: block; float: right;" ng-click="cronapi.client('js.blockly.Forum.abrirModalResposta').run()" ng-disabled="pergunta[4] != null &amp;&amp; pergunta[5] >= '2'"> <span><img class="img-img-btn" src="css/svg/plus-circle-solid.svg">ADICIONAR RESPOSTA</span> </button> 
+  </div> 
+  <h1 class="text-center component-holder title-topico" xattr-position="h1 text-center" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-808448" style="color: #95a5a6;">Tópico</h1> 
+  <div class="container"> 
+    <div class="row"> 
+      <h1 class="text-center component-holder title-respostas" xattr-position="h1 text-center" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-808448" style="color: #95a5a6;">Respostas</h1>
+    </div> 
+  </div> 
+  <p type="text" id="input4707" style="border-bottom: 2px solid #F7F7F7;"></p> 
+  <div class="row  row-topic"> 
+    <img class="img-img" src="css/svg/social-buffer-1.svg"> 
+    <h2 class="welcome" crn-repeat="">{{pergunta[0]}}</h2> 
+  </div> 
+  <div class="component-holder" data-component="crn-textinput" id="crn-textinput-324280"> 
+    <div style="margin-top: 15px;margin-left: 32px;display: inline-block;margin-bottom: 25px;"> 
+      <a class="per-icon-attach" href="#/home/logged/forum?param0={{pergunta[1]}}" target="_blank" ng-if="pergunta[2] != null"> <span style="padding-left:5px;padding-right:5px;"><img style="width:18px;" src="css/svg/seta-direita.svg"></span> </a> 
+    </div> 
+    <div style="display: inline-block;"> 
+      <a class="per-associada" href="#/home/logged/forum?param0={{pergunta[1]}}" target="_blank" ng-if="pergunta[2] != null"> <span style="padding: 10px;">{{pergunta[2]}}</span> </a> 
+    </div> 
+    <div class="container-result" style="color: #95a5a6;"> 
+      <div class="col-md-2 or-day" data-container="true" data-replace="true">
+         {{respostas.length}} 
+      </div>
+    </div> 
+    <div class="sub-quest" style="width:50%;"> 
+      <h1 class="component-holder h5 text-left" xattr-position="text-left" xattr-type="h5" data-component="crn-text-component" id="crn-text-component-383520" style="margin-left: 38px;" ng-if="pergunta[3] != null">{{pergunta[3]}}</h1> 
+    </div> 
+    <button class="btn-sub" xattr-fullsize="" xattr-theme="btn-default" data-toggle="collapse" data-target="#demo" ng-if="pergunta[3] == null &amp;&amp; pergunta[5] < '2' || pergunta[3] == '' &amp;&amp; pergunta[5] < '2'"> <span>ADICIONAR SUB-QUESTIONAMENTO<img class="img-circle-sub" src="css/svg/plus-circle-solid.svg"> </span> </button> 
+    <div id="demo" class="collapse" style="color: black;"> 
+      <div> 
+        <textarea name="sname" style="margin-top: 15px;margin-left: 30px;border-radius: 5px;padding: 5px;width: 380px;height: 150px;" ng-model="sub_questionamento"></textarea> 
+        <button class="btn btn-primary btn-fab k-button btn-modal" type="submit" ng-click="cronapi.server('blockly.Forum.adicionarSubQuestionamento').run(params.param0, sub_questionamento)" style="margin-left: 8px;position: absolute;margin-top: 120px;"> <span class="k-icon k-i-check"></span> </button> 
+      </div> 
+    </div> 
+    <div style="margin-top: 30px;margin-left: 30px;display: inline-block;"> 
+      <a class="per-anexos" ng-click="cronapi.client('js.blockly.Forum.abrirModalArquivos').run(anexosPergunta.length, anexosPergunta)" style="cursor:pointer;"> <span style="padding-left:5px;padding-right:5px;"><img style="width: 14px;margin-bottom: 3px;" src="css/svg/anexo.svg"></span> {{anexosPergunta.length}}&nbsp;&nbsp; </a> 
+    </div> 
+    <p ng-if="respostas.length != 0" type="text" id="input4707" style="border-bottom: 2px solid #F7F7F7; margin: 20px;"></p> 
+    <div ng-if="respostas.length != 0" class="row">
+      <ul class="ul-respostas">
+      <li ng-repeat="r in respostas" style="margin-bottom: 3em;">
+        <div class="container-list"> 
+        <h2 class="title-w1">{{r.respondente.name}}</h2> 
+        <h3 class="sub-w1">{{ r.data_resposta | limitTo:10 }}</h3> 
+      </div> 
+      <h4 class="msg-resposta">{{r.descricao}}</h4>
+      <div class="btn-acoes-resposta" style="margin-left:5.8em;">
+        <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-44863" ng-show="pergunta[4] == null"><button class="btn k-button btn-light" data-toggle="collapse" data-target="#final" xattr-fullsize="" xattr-theme="btn-light" xattr-disabled="" style="padding:7px;" ng-click="cronapi.client('js.blockly.Forum.copiarDescricao').run(r.descricao)"><i class="fa fa-copy" style="padding-right:0;color:black;top:0;margin-right:0;"></i> <span></span></button></div>
+      </div>
+      </li>
+      </ul>
+    </div>
+    <p type="text" id="input4707" style="border-bottom: 2px solid #F7F7F7; margin: 20px;"></p>
+    <div ng-if="pergunta[4] != null" style="margin-left:20px;">
+        <span style="color: rgb(255, 128, 0); font-size: 16px; border: 2px solid rgb(255, 128, 0); border-radius: 5px; padding: 6px 10px 6px 10px;">RESPOSTA FINAL:</span>
+        <div>
+        <textarea name="fname" style="margin-top: 15px;border-radius: 5px;padding: 5px;width: 380px;height: 150px;" ng-model="pergunta[4]" ng-disabled="true"></textarea>
+        </div>
+    </div>
+    <button class="btn btn-add" xattr-fullsize="" xattr-theme="btn-default" xattr-disabled="" style="margin-top: -5px; margin-left: 20px;" ng-show="cronapi.server('blockly.Forum.verificarAddRespostaFinal').attr().run(params.param0)" data-toggle="collapse" data-target="#final"> <span><img class="img-img-btn" src="css/svg/plus-circle-solid.svg">ADICIONAR RESPOSTA FINAL</span> </button> 
+    <div id="final" class="collapse" style="color: black;"> 
+      <div> 
+        <textarea name="fname" style="margin-top: 15px;margin-left: 20px;border-radius: 5px;padding: 5px;width: 380px;height: 150px;" ng-model="resposta_final"></textarea> 
+        <button class="btn btn-primary btn-fab k-button btn-modal" type="submit" ng-click="cronapi.server('blockly.Forum.adicionarRespostaFinal').run(params.param0, resposta_final)" style="margin-left: 8px;position: absolute;margin-top: 120px;"> <span class="k-icon k-i-check"></span> </button> 
+      </div> 
+    </div>
+</div> 
+<div class="modal fade" id="modalResposta"> 
+  <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <div class="modal-header"> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"></button> 
+        <h4 class="modal-title text-title-user" style="">{{'addRespostaTittle' | translate}}</h4> 
+      </div> 
+      <div class="modal-body body-style-resp" style=""> 
+        <textarea name="resposta" ng-model="resposta" style="width: 100%;height: 150px;border-radius: 5px;"></textarea> 
+        <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-619840" ng-show="true">
+          <button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Forum.uploadArquivoResposta').run(params.param0, idResposta)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="fa fa-upload"></i> <span>Inserir Anexos</span></button>
+        </div><h1 class="component-holder text-left h5" xattr-position="text-left" xattr-type="h5" data-component="crn-text-component" id="crn-text-component-311863" style="" ng-model="msgCarregando">{{msgCarregando}}</h1>
+      </div> 
+      <div class="modal-footer"> 
+        <button class="btn btn-primary btn-fab k-button btn-modal" type="submit" ng-click="cronapi.server('blockly.Forum.adicionarResposta').run(params.param0, resposta, idResposta)" ng-disabled="vm.dataLoading"><span class="k-icon k-i-check"></span></button> 
+        <button class="btn btn-default btn-fab k-button btn-cancel-modal" type="button" data-dismiss="" ng-click="cronapi.client('js.blockly.Forum.fecharModalResposta').run()"><span class="k-icon k-i-close"></span></button> 
+      </div> 
+    </div> 
+  </div> 
+</div></div><div class="modal fade" id="modalArquivos">
+ <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <div class="modal-header"> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"></button> 
+        <h4 class="modal-title text-title-user" style="">{{'textAnexos' | translate}}</h4> 
+      </div> 
+      <div class="modal-body body-style-resp" style="margin-bottom: 10px;">
+    <ul class="list-file">
+        <li ng-repeat="a in anexos">
+    <a class="box-file" ng-click="cronapi.server('blockly.Forum.downloadArquivo').run(a[1])"><span class="fa fa-download"></span></a> <strong>Tipo de Arquivo:</strong> {{a[2]}}
+</li>
+    </ul>
+</div> 
+      <div class="modal-footer"> 
+         
+        <button class="btn btn-default btn-fab k-button btn-cancel-modal" type="button" data-dismiss="modal" ng-click=""><span class="k-icon k-i-close"></span></button> 
+      </div> 
+    </div> 
+  </div> 
+</div>

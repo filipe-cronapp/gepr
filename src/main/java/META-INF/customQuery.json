@@ -1,0 +1,1527 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Autenticar",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "blockly": null,
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "GETAuthorities": null,
+      "POST": false,
+      "POSTAuthorities": null,
+      "PUT": false,
+      "PUTAuthorities": null,
+      "DELETE": false,
+      "DELETEAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "security": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Obter Autorização",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "blockly": null,
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "GETAuthorities": null,
+      "POST": false,
+      "POSTAuthorities": null,
+      "PUT": false,
+      "PUTAuthorities": null,
+      "DELETE": false,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "user": null
+    },
+    "security": {
+      "id": null,
+      "user": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "query690295": {
+    "customId": "query690295",
+    "queryName": "exibirListaLicitacaoAdmin",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Licitacao",
+    "entityFullName": "app.entity.Licitacao",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Licitacao",
+          "namespace": "app.entity.Licitacao",
+          "alias": "l"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "l",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "l.statusLicitacao",
+          "order": "asc"
+        },
+        {
+          "func": "get",
+          "field": "l.previsao_encerramento",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "POST": true,
+      "POSTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "PUT": true,
+      "PUTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "DELETE": true,
+      "DELETEAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ]
+    },
+    "events": {
+      "beforeInsert": {
+        "type": "server",
+        "blocklyMethod": "validarCamposLicitacao",
+        "blocklyClass": "blockly.Licitacao",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "data",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Licitacao",
+          "sourcePath": "src/main/java/blockly/Licitacao.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "reabrirLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "id"
+              ]
+            },
+            {
+              "name": "validarCamposLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "data"
+              ]
+            },
+            {
+              "name": "excluirLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "id_licitacao"
+              ]
+            },
+            {
+              "name": "retornaIdStatusLicitacao",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            }
+          ]
+        }
+      },
+      "beforeUpdate": {
+        "type": "server",
+        "blocklyMethod": "validarCamposLicitacao",
+        "blocklyClass": "blockly.Licitacao",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "data",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Licitacao",
+          "sourcePath": "src/main/java/blockly/Licitacao.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "reabrirLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "id"
+              ]
+            },
+            {
+              "name": "validarCamposLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "data"
+              ]
+            },
+            {
+              "name": "excluirLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "id_licitacao"
+              ]
+            },
+            {
+              "name": "retornaIdStatusLicitacao",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            }
+          ]
+        }
+      },
+      "beforeDelete": {
+        "type": "server",
+        "blocklyMethod": "excluirLicitacao",
+        "blocklyClass": "blockly.Licitacao",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "id_publicacao",
+            "value": "primaryKey",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Licitacao",
+          "sourcePath": "src/main/java/blockly/Licitacao.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "cadastrarLicitacao",
+              "hasReturn": "true",
+              "params": [
+                "numeroProcesso",
+                "nome",
+                "descricao",
+                "gerencia",
+                "previsaoEncerramento"
+              ]
+            },
+            {
+              "name": "obterIdUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "excluirLicitacao",
+              "hasReturn": "false",
+              "params": [
+                "id_publicacao"
+              ]
+            }
+          ]
+        }
+      },
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "numero_processo": null,
+      "nome": null,
+      "descricao": null,
+      "data_abertura": {
+        "type": "server",
+        "blocklyMethod": "obterDataAtual",
+        "blocklyClass": "blockly.Utilidades",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Utilidades",
+          "sourcePath": "src/main/java/blockly/Utilidades.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "obterIdUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "obterDataAtual",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "previsao_encerramento": null,
+      "data_encerramento": null,
+      "criador_licitacao": {
+        "type": "server",
+        "blocklyMethod": "obterIdUsuarioLogado",
+        "blocklyClass": "blockly.Utilidades",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Utilidades",
+          "sourcePath": "src/main/java/blockly/Utilidades.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "obterIdUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "obterDataAtual",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "gerencia": null,
+      "responsavelTecnico": null,
+      "statusLicitacao": "0"
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "numero_processo": null,
+      "nome": null,
+      "descricao": null,
+      "data_abertura": null,
+      "previsao_encerramento": null,
+      "data_encerramento": null,
+      "criador_licitacao": null,
+      "gerencia": null,
+      "responsavelTecnico": null,
+      "statusLicitacao": null
+    },
+    "security": {
+      "id": null,
+      "numero_processo": null,
+      "nome": null,
+      "descricao": null,
+      "data_abertura": null,
+      "previsao_encerramento": null,
+      "data_encerramento": null,
+      "criador_licitacao": null,
+      "gerencia": null,
+      "responsavelTecnico": null,
+      "statusLicitacao": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query690295/"
+  },
+  "query463211": {
+    "customId": "query463211",
+    "queryName": "exibirUsuariosRespondentes",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select u from User u where exists ( select r.id from Role r where r.id \u003d \u0027Respondentes\u0027 and r.user.id \u003d u.id) \nand (lower(:login) is null OR lower(u.login) !\u003d lower(:login))",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "POST": true,
+      "POSTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "PUT": true,
+      "PUTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "DELETE": true,
+      "DELETEAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ]
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "login": null,
+      "name": null,
+      "email": null,
+      "password": null,
+      "gerencia": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "login": null,
+      "name": null,
+      "email": null,
+      "password": null,
+      "gerencia": null
+    },
+    "security": {
+      "id": null,
+      "login": null,
+      "name": null,
+      "email": null,
+      "password": null,
+      "gerencia": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query463211/"
+  },
+  "query109810": {
+    "customId": "query109810",
+    "queryName": "exibirListaPerguntasAdmin",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Pergunta",
+    "entityFullName": "app.entity.Pergunta",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select p from Pergunta p \r\nwhere exists ( \r\nselect pc from PalavrasChave pc join pc.pergunta pcp where (\r\n(pcp.id is null OR pcp.id \u003d p.id ) and \r\n(lower(:palavraChave) is null OR lower(pc.nome) LIKE (CONCAT(\u0027%\u0027, lower(:palavraChave), \u0027%\u0027)))\r\n)  OR (:palavraChave is null) \r\n) \r\nAND \r\n(lower(:descricao) is null OR lower(p.descricao) LIKE (CONCAT(\u0027%\u0027, lower(:descricao), \u0027%\u0027))) \r\nAND ( :licitacaoId is null OR p.fk_licitacao.id \u003d :licitacaoId)  \r\norder by p.statusPergunta asc, p.data_cadastro asc ",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "palavraChave",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "descricao",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "licitacaoId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "POST": true,
+      "POSTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "PUT": true,
+      "PUTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "DELETE": true,
+      "DELETEAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ]
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": {
+        "type": "server",
+        "blocklyMethod": "excluirPergunta",
+        "blocklyClass": "blockly.Pergunta",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "id_pergunta",
+            "value": "primaryKey",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Pergunta",
+          "sourcePath": "src/main/java/blockly/Pergunta.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "enviarEmailParaRespondentes",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "enviarEmailParaRespondentesEdicao",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "retornaIdStatusPergunta",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            },
+            {
+              "name": "excluirPergunta",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            }
+          ]
+        }
+      },
+      "afterInsert": {
+        "type": "server",
+        "blocklyMethod": "enviarEmailParaRespondentes",
+        "blocklyClass": "blockly.Pergunta",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "id_pergunta",
+            "value": "primaryKey",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Pergunta",
+          "sourcePath": "src/main/java/blockly/Pergunta.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "enviarEmailParaRespondentes",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "dispararEmails",
+              "hasReturn": "false",
+              "params": [
+                "rows"
+              ]
+            },
+            {
+              "name": "excluirPergunta",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "enviarEmailParaRespondentesEdicao",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "retornaIdStatusPergunta",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            },
+            {
+              "name": "retornaValorPerguntaAssociada",
+              "hasReturn": "true",
+              "params": [
+                "id"
+              ]
+            }
+          ]
+        }
+      },
+      "afterUpdate": {
+        "type": "server",
+        "blocklyMethod": "enviarEmailParaRespondentesEdicao",
+        "blocklyClass": "blockly.Pergunta",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "id_pergunta",
+            "value": "primaryKey",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.Pergunta",
+          "sourcePath": "src/main/java/blockly/Pergunta.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "enviarEmailParaRespondentes",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "dispararEmails",
+              "hasReturn": "false",
+              "params": [
+                "rows"
+              ]
+            },
+            {
+              "name": "excluirPergunta",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "enviarEmailParaRespondentesEdicao",
+              "hasReturn": "false",
+              "params": [
+                "id_pergunta"
+              ]
+            },
+            {
+              "name": "retornaIdStatusPergunta",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            },
+            {
+              "name": "retornaValorPerguntaAssociada",
+              "hasReturn": "true",
+              "params": [
+                "id"
+              ]
+            }
+          ]
+        }
+      },
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "data_cadastro": {
+        "type": "server",
+        "blocklyMethod": "obterDataAtual",
+        "blocklyClass": "blockly.Utilidades",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Utilidades",
+          "sourcePath": "src/main/java/blockly/Utilidades.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "obterIdUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "retornaIdStatus",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            },
+            {
+              "name": "obterDataAtual",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": {
+        "type": "server",
+        "blocklyMethod": "obterIdUsuarioLogado",
+        "blocklyClass": "blockly.Utilidades",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Utilidades",
+          "sourcePath": "src/main/java/blockly/Utilidades.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "obterIdUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "retornaIdStatus",
+              "hasReturn": "true",
+              "params": [
+                "nome_status"
+              ]
+            },
+            {
+              "name": "obterDataAtual",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "pergunta_associada": null,
+      "subQuestionamento": null,
+      "respostaFinal": null,
+      "statusPergunta": "\"0\""
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "subQuestionamento": null,
+      "respostaFinal": null,
+      "statusPergunta": null
+    },
+    "security": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "subQuestionamento": null,
+      "respostaFinal": null,
+      "statusPergunta": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query109810/"
+  },
+  "query945621": {
+    "customId": "query945621",
+    "queryName": "exibirPalavrasChave",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "PalavrasChave",
+    "entityFullName": "app.entity.PalavrasChave",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "PalavrasChave",
+          "namespace": "app.entity.PalavrasChave",
+          "alias": "p"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "p.nome",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [
+        {
+          "field": "p.nome"
+        }
+      ],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "POST": true,
+      "POSTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "PUT": true,
+      "PUTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "DELETE": true,
+      "DELETEAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Administrators",
+        "Compradores"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Administrators",
+        "Compradores"
+      ]
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "nome": null,
+      "pergunta": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "nome": null,
+      "pergunta": null
+    },
+    "security": {
+      "id": null,
+      "nome": null,
+      "pergunta": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query945621/"
+  },
+  "query124687": {
+    "customId": "query124687",
+    "queryName": "buscarPerguntaRespondentes",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "PerguntaRespondentes",
+    "entityFullName": "app.entity.PerguntaRespondentes",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "PerguntaRespondentes",
+          "alias": "p",
+          "namespace": "app.entity.PerguntaRespondentes"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "p"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "pergunta": null,
+      "user": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "pergunta": null,
+      "user": null
+    },
+    "security": {
+      "id": null,
+      "pergunta": null,
+      "user": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query124687/"
+  },
+  "query499913": {
+    "customId": "PerguntaDados",
+    "queryName": "obterDadosPerguntaPorId",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Pergunta",
+    "entityFullName": "app.entity.Pergunta",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Pergunta",
+          "namespace": "app.entity.Pergunta",
+          "alias": "p"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "p.descricao",
+          "type": "string"
+        },
+        {
+          "func": "get",
+          "field": "p.pergunta_associada.descricao",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "p.id",
+            "field": "p.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":id",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": "params.param0"
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "security": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query499913/"
+  },
+  "query932383": {
+    "customId": "query932383",
+    "queryName": "exibirListaPerguntasResp",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Pergunta",
+    "entityFullName": "app.entity.Pergunta",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select p.pergunta from PerguntaRespondentes p where p.user.id \u003d :id\r\n    and exists ( \r\n        select pc from PalavrasChave pc join pc.pergunta pcp where (\r\n            (pcp.id is null OR pcp.id \u003d p.pergunta.id ) and \r\n            (lower(:palavraChave) is null OR lower(pc.nome) LIKE (CONCAT(\u0027%\u0027, lower(:palavraChave), \u0027%\u0027)))\r\n        ) OR (:palavraChave is null) \r\n    ) \r\n    AND (lower(:descricao) is null OR lower(p.pergunta.descricao) LIKE (CONCAT(\u0027%\u0027, lower(:descricao), \u0027%\u0027))) \r\n    AND ( :licitacaoId is null OR p.pergunta.fk_licitacao.id \u003d :licitacaoId)  \r\n    order by p.pergunta.statusPergunta asc, p.pergunta.data_cadastro asc \r\n    ",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": {
+          "type": "server",
+          "blocklyMethod": "obterIdUsuarioLogado",
+          "blocklyClass": "blockly.Utilidades",
+          "blocklyLanguage": "java",
+          "blocklyParams": [],
+          "blocklyJson": {
+            "namespace": "blockly.Utilidades",
+            "sourcePath": "src/main/java/blockly/Utilidades.blockly",
+            "language": "java",
+            "methods": [
+              {
+                "name": "obterIdUsuarioLogado",
+                "hasReturn": "true",
+                "params": []
+              },
+              {
+                "name": "obterDataAtual",
+                "hasReturn": "true",
+                "params": []
+              },
+              {
+                "name": "buscarDadosUsuario",
+                "hasReturn": "true",
+                "params": [
+                  "chave"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "fieldName": "palavraChave",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "descricao",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "licitacaoId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": [
+        "Authenticated"
+      ],
+      "POST": true,
+      "POSTAuthorities": [
+        "Authenticated"
+      ],
+      "PUT": true,
+      "PUTAuthorities": [
+        "Authenticated"
+      ],
+      "DELETE": true,
+      "DELETEAuthorities": [
+        "Authenticated"
+      ],
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Authenticated"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Authenticated"
+      ]
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "security": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query932383/"
+  },
+  "query288833": {
+    "customId": "query288833",
+    "queryName": "exibirPerguntasRelatorio",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Pergunta",
+    "entityFullName": "app.entity.Pergunta",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Pergunta",
+          "namespace": "app.entity.Pergunta",
+          "alias": "p"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "p.descricao",
+          "type": "string"
+        },
+        {
+          "func": "get",
+          "field": "p.respostaFinal",
+          "type": "string"
+        },
+        {
+          "func": "get",
+          "field": "p.fk_licitacao.numero_processo",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "p.data_publicacao",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "p.fk_licitacao",
+            "field": "p.fk_licitacao",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":fk_licitacao",
+            "valueIsField": false
+          },
+          {
+            "id": "p.data_publicacao",
+            "field": "p.data_publicacao",
+            "type": "date",
+            "input": "text",
+            "operator": "is_not_null",
+            "value": null,
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "fk_licitacao",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "security": {
+      "id": null,
+      "data_cadastro": null,
+      "descricao": null,
+      "data_publicacao": null,
+      "fk_licitacao": null,
+      "criador_pergunta": null,
+      "pergunta_associada": null,
+      "statusPergunta": null,
+      "subQuestionamento": null,
+      "respostaFinal": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query288833/"
+  }
+}
